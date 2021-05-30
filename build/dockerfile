@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y  sudo
 EXPOSE 80 22
 
 ## Copy site into place.
-ADD app_latest.zip /var/www/html
+ADD /tmp/app_latest.zip /var/www/html
 RUN cd /var/www/html/ && \
   unzip app_latest.zip && \
   rm /var/www/html/app_latest.zip
