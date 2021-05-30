@@ -33,8 +33,8 @@ RUN apt-get update && apt-get install -y  awscli
 EXPOSE 80 22
 
 ## Copy site into place.
-RUN aws s3 cp s3://testingjojo/app_latest.zip /var/www/html/app_latest.zip
-#ADD /tmp/app_latest.zip /var/www/html
+#RUN aws s3 cp s3://testingjojo/app_latest.zip /var/www/html/app_latest.zip
+ADD app_latest.zip /var/www/html
 RUN cd /var/www/html/ && \
   unzip app_latest.zip && \
   rm /var/www/html/app_latest.zip
