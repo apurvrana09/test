@@ -27,3 +27,4 @@ echo "Uploading to S3 Bucket...."
 aws s3 cp ${buildZipName} s3://${codeBuildBucket}/ > /dev/null
 
 echo "Zip uploaded to bucket successfully"
+aws s3 cp s3://${codeBuildBucket}/${buildZipName} /tmp/${buildZipName}
