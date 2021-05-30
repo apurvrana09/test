@@ -42,7 +42,7 @@ RUN cd /var/www/html/ && \
 
 RUN rm -rf /var/www/html/.git*
 
-RUN cd /var/www/html/.build/.config_files/ && \
+RUN cd /var/www/html/build/config_files/ && \
 #    cp parameters.yml /var/www/html/app/config/ && \
 #    cp cli-php.ini /etc/php/7.4/cli/php.ini && \
 #    cp apache-php.ini /etc/php/7.4/apache2/php.ini && \
@@ -64,7 +64,7 @@ RUN cd /var/www/html/ && \
 
 
 ## Update the default apache site with the config we created.
-RUN cd /var/www/html/.build/.config_files/ && \
+RUN cd /var/www/html/build/config_files/ && \
     cp apache2.conf /etc/apache2/apache2.conf && \
     cp 000-default.conf /etc/apache2/sites-enabled/ && \
      cp supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
