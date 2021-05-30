@@ -1,4 +1,4 @@
-FROM pgsdevops/pimcore-ubuntu-php74:v1
+FROM pgsdevops/pimcore-ubuntu-php74:v1.0
 
 ##########################SSH Access#######################
 RUN echo "root:Docker!" | chpasswd \
