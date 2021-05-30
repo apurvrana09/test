@@ -1,0 +1,2 @@
+doctrine:
+    dbal: { connections: { default: { host: docker-rds.cruijt0zgxvy.us-east-1.rds.amazonaws.com, port: 3306, user: docker_rds, password: Docker123, dbname: docker_rds, charset: utf8mb4, server_version: 8 } } }

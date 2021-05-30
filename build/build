@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Author: PGS
+
+codeBuildBucket="dockerpipeline"
+
+buildFolder="builds"
+
+buildZipName="app_latest.zip"
+
+mkdir -p ${buildFolder}
+
+if [ -d "var/classes" ]
+
+then
+cp -r var/classes/* ${buildFolder}
+fi
+
+echo "Extracting Zip....."
+
+zip ${buildZipName} -r . -x "var/classes" -x "var/classes/*" -x "var/config" -x "var/config/*" -x "var/sessions" -x "var/sessions/*"  -x "var/versions" -x "var/versions/*" -x "var/cache" -x "var/cache/*" -x "vendor" -x "vendor/*" -x "pimcore" -x "pimcore/*" -x ".scannerwork" -x ".scannerwork/*" -x "web/var" -x "web/var/*" -x "*.git*" -x "*.git*/*" -x "*.zip" -x "composer.json" -x "composer.lock" > /dev/null
+
+echo "Zip created successfully"
+
+echo "Uploading to S3 Bucket...."
+
+aws s3 cp ${buildZipName} s3://${codeBuildBucket}/ > /dev/null
+
+echo "Zip uploaded to bucket successfully"
