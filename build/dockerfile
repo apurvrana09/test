@@ -49,7 +49,7 @@ RUN cd /var/www/html/build/config_files/ && \
     cp startup.sh /var/www/html/ && \
  #   cp pimcore.conf /etc/apache2/sites-enabled/ && \
     cp database.yml /var/www/html/app/config/local/ && \
-    cp config.yml /var/www/html/app/config/ && \
+    cp config.yml /var/www/html/app/config/ 
 #    cp services.yml /var/www/html/app/config/ && \
 #    cp crontab.txt /tmp/crontab.txt 
 
