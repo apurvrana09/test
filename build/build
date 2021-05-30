@@ -2,7 +2,7 @@
 
 # Author: PGS
 
-codeBuildBucket="dockerpipeline"
+codeBuildBucket="testingjojo"
 
 buildFolder="builds"
 
