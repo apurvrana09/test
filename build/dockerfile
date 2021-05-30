@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y  php-imagick
 RUN apt-get update && apt-get install -y  supervisor
 RUN apt-get update && apt-get install -y  libgvpr2
 RUN apt-get update && apt-get install -y  sudo
+RUN apt-get update && apt-get install -y  awscli
 
 EXPOSE 80 22
 
