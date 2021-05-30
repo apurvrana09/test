@@ -47,7 +47,7 @@ RUN cd /var/www/html/build/config_files/ && \
 #    cp cli-php.ini /etc/php/7.4/cli/php.ini && \
 #    cp apache-php.ini /etc/php/7.4/apache2/php.ini && \
     cp startup.sh /var/www/html/ && \
-    cp pimcore.conf /etc/apache2/sites-enabled/ && \
+ #   cp pimcore.conf /etc/apache2/sites-enabled/ && \
     cp database.yml /var/www/html/app/config/local/ && \
     cp config.yml /var/www/html/app/config/ && \
 #    cp services.yml /var/www/html/app/config/ && \
